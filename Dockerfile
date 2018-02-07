@@ -5,7 +5,7 @@ RUN apt update -y && \
     apt install lintian vim git -y
 
 COPY .bashrc /root/.bashrc
-COPY corrections.txt /usr/share/lintian/data/spelling/
+COPY corrections /usr/share/lintian/data/spelling/
 COPY fix_typo.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/fix_typo.sh
 
